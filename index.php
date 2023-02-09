@@ -488,7 +488,7 @@ include './comment.php';
                             </div>
                             <h4 class="mb-3"><?php echo $row["title"] ?> </h4>
                             <p class="mb-4"><?php echo $row["description"] ?> </p>
-                            <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a>
+                            <!-- <a class="btn btn-primary" href=""><i class="fa fa-plus text-primary "></i>Read More</a> -->
                         </div>
                     </div>
                 </div>

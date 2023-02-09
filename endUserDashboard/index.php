@@ -101,12 +101,12 @@ $feching = $query->fetchAll(PDO::FETCH_OBJ);
                 </div>
                 <div class="navbar-nav w-100">
                     <a href="#" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2 text-primary"></i>Dashboard</a>
-                    <a href="../index.php#destination" class="nav-item nav-link "><img src="backHome.jpg" style="width:40px;">Back Home to <span style="padding-left:40px;">booking</span></a>
+                   
                     <!-- <a href="users/userList.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2 text-primary"></i>profile</a> -->
                     <a href="Booked/booked.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2 text-primary"></i>Booked dest</a>
 
                     <a href="Booked/hotelBoked.php" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2 text-primary"></i>Booked Hotel</a>
-
+                    <a href="../index.php#destination" class="nav-item nav-link "><img src="backHome.jpg" style="width:40px;">Back Home to <span style="padding-left:40px;">booking</span></a>
 
                 </div>
             </nav>

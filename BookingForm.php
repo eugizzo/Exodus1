@@ -86,6 +86,7 @@ while ($row = $detail->fetch_assoc()) {
               && !empty($_POST['phone'])
               && !empty($_POST['number'])
               && !empty($_POST['email'])
+              && !empty($_POST['country'])
             ) {
               
               $location = $_POST['location'];
@@ -94,12 +95,13 @@ while ($row = $detail->fetch_assoc()) {
               $phone = $_POST['phone'];
               $email = $_POST['email'];
               $number = $_POST['number'];
+              $country = $_POST['country'];
               $status = 0;
               $request = 0;
               $message = 'Dear ' . $name . ' Booking successful for : ' . $title . '  ' . 'Tour.';
-              $insert = "INSERT INTO `booking`(`title`, `location`, `name`, `email`, `number`, `phone`, `date`, `status`, `request`) VALUES (?,?,?,?,?,?,?,?,?)";
+              $insert = "INSERT INTO `booking`(`title`, `location`, `name`, `email`, `number`, `phone`,`country`,`date`, `status`, `request`) VALUES (?,?,?,?,?,?,?,?,?,?)";
               $query = $conn->prepare($insert);
-              $query->execute(array($title, $location, $name, $email, $number, $phone, date('Y-m-d H:i:s'), $status, $request));
+              $query->execute(array($title, $location, $name, $email, $number, $phone, $country,date('Y-m-d H:i:s'), $status, $request));
 
               if ($query) {
             ?>
@@ -149,11 +151,16 @@ while ($row = $detail->fetch_assoc()) {
             <input type="date" class="form-control" name="date" placeholder="date">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" name="phone" placeholder="enter phone number" value="">
+            <input type="text" class="form-control" name="phone" placeholder="Enter phone number" value="">
           </div>
           <div class="form-group">
-            <input type="number" class="form-control" name="number" placeholder="how many room you want to booking">
+            <input type="text" class="form-control" name="country" placeholder="Enter your country">
           </div>
+
+          <div class="form-group">
+            <input type="number" class="form-control" name="number" placeholder="How many room you want to booking">
+          </div>
+          
           <!-- <div class="form-group">
             <textarea  cols="30" rows="7" class="form-control" name="message" placeholder="Message"></textarea>
           </div> -->

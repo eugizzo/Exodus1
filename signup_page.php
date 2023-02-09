@@ -1,14 +1,12 @@
 
 <head>
-<?php
-// include '../header.php';
-?>
+
 <link rel="stylesheet" href="css/signup.css">
 </head>
 
 
 <head>
-	<title>Exodus Tour and Travel Agency</title>
+	<title>Pacific - Free Bootstrap 4 Template by Colorlib</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
@@ -32,9 +30,10 @@
 	<!-- <script src="https://cdn.tailwindcss.com"></script> -->
 </head>
 <div class="shadow">
-<?php
-include './header.php';
-?></div>
+<?php 
+include './header.php'
+?>
+</div>
 <div class="login-wrap">
     
 	<div class="login-html">
@@ -44,7 +43,7 @@ include './header.php';
 		<div class="login-form">
             <div class="sign-up-htm">
 
-				<form method="POST" action="signup.php">
+				<form method="POST" action="signup.php"  enctype="multipart/form-data">
 
 	
 				<div class="group">
@@ -59,19 +58,21 @@ include './header.php';
 					<label for="user" class="label">Phone Number</label>
 					<input id="user" type="number" class="input" name="phone">
 				</div>
-				<div class="group">
-					<label for="user" class="label">Location</label>
-					<input id="user" type="text" class="input" name="Location">
-				</div>
+			
+				
+
+
 				<div class="group">
 					<label for="user" class="label">Password</label>
 					<input id="pass" type="password" class="input" name="password" data-type="password">
 				</div>
-				<!-- <div class="group">
-					<label for="pass" class="label">Repeat Password</label>
-					<input id="pass" type="password" class="input" data-type="password">
-				</div> -->
 				
+				<div class="group">
+				<label for="user" class="label">profile</label>
+					<input id="user" type="file" class="input" name="file">
+				
+				</div>
+
 				<div class="group">
 					<input type="submit" class="button" value="Sign Up">
 				</div>
@@ -102,7 +103,7 @@ include './header.php';
 				</div>
 				<div class="hr"></div>
 				<div class="foot-lnk">
-					<a href="../index.php">Back Home</a>
+					<a href="#forgot">Forgot Password?</a>
 				</div>
 				</form>
 			</div>
